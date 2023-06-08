@@ -13,14 +13,13 @@ public class UserProfile {
     private int theme;
     private String summary;
     private String userName;
-
-    /*private String firstName;
+    private String firstName;
     private String lastName;
     private String email;
     private String phone;
     private String designation;
 
-    @OneToMany(cascade = CascadeType.ALL,
+    /*@OneToMany(cascade = CascadeType.ALL,
             orphanRemoval = true)
     @JoinColumn(name = "id")
     List<Job> jobs = new ArrayList<>();
@@ -55,7 +54,7 @@ public class UserProfile {
 
     public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
-    }
+    }*/
 
     public String getFirstName() {
         return firstName;
@@ -95,7 +94,7 @@ public class UserProfile {
 
     public void setDesignation(String designation) {
         this.designation = designation;
-    }*/
+    }
 
     public String getUserName() {
         return userName;

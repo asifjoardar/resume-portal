@@ -22,14 +22,14 @@
 		</div>
 		
 		<div id="name">
-			<h1 class="quickFade delayTwo">cv</h1>
-			<h2 class="quickFade delayThree">My Profile</h2>
+			<h1 class="quickFade delayTwo"><span th:text="${userProfile.firstName}">first</span> <span th:text="${userProfile.lastName}">last</span></h1>
+			<h3 class="quickFade delayThree"><span th:text="${userProfile.designation}">designation</span></h3>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-				<li>email: <a href="mailto:jdmossmanson@163.com" target="_blank">jdmossmanson@163.com</a></li>
-
+				<li>email: <span th:text="${userProfile.email}">abc@163.com</span></li>
+				<li>phone: <span th:text="${userProfile.phone}">12345</span></li>
 			</ul>
 		</div>
 		<div class="clear"></div>
