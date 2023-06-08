@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Joe Bloggs - Curriculum Vitae</title>
 
@@ -43,7 +43,7 @@
 				</div>
 				
 				<div class="sectionContent">
-					<p>Having 3 years of diverse experience in IT Industry with proven expertise in full application software life cycle development involving Analysis, Design, Development, Testing, Implementation of application software with emphasis on Object Oriented, J2EE and Client Server technologies. 
+					<p th:text="${userProfile.summary}">Having 3 years of diverse experience in IT Industry with proven expertise in full application software life cycle development involving Analysis, Design, Development, Testing, Implementation of application software with emphasis on Object Oriented, J2EE and Client Server technologies.
                        • Excellent capability to explore, learn and understand newer business domains and technology. <br/>
                        • Good domain knowledge of Retail, Insurance, Banking and Telecomm domains. <br/>
                        • Extensive experience with Core Java concepts like Exception Handling, Collections, Multithreading and with advanced J2EE such as Spring and Hibernate .<br/>

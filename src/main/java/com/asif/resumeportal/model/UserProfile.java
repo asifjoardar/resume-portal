@@ -12,9 +12,9 @@ public class UserProfile {
     private int id;
     private int theme;
     private String summary;
+    private String userName;
 
-    /*private String userName;
-    private String firstName;
+    /*private String firstName;
     private String lastName;
     private String email;
     private String phone;
@@ -95,7 +95,7 @@ public class UserProfile {
 
     public void setDesignation(String designation) {
         this.designation = designation;
-    }
+    }*/
 
     public String getUserName() {
         return userName;
@@ -103,7 +103,7 @@ public class UserProfile {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }*/
+    }
 
     public int getId() {
         return id;
