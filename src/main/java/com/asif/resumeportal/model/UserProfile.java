@@ -8,7 +8,7 @@ import java.util.List;
 @Table
 public class UserProfile {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     private int theme;
     private String summary;
@@ -19,12 +19,11 @@ public class UserProfile {
     private String phone;
     private String designation;
 
-    /*@OneToMany(cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    @JoinColumn(name = "id")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "job_id")
     List<Job> jobs = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL,
+    /*@OneToMany(cascade = CascadeType.ALL,
             orphanRemoval = true)
     @JoinColumn(name = "id")
     List<Education> educations = new ArrayList<>();
@@ -46,7 +45,7 @@ public class UserProfile {
 
     public void setEducations(List<Education> educations) {
         this.educations = educations;
-    }
+    }*/
 
     public List<Job> getJobs() {
         return jobs;
@@ -54,7 +53,7 @@ public class UserProfile {
 
     public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
-    }*/
+    }
 
     public String getFirstName() {
         return firstName;
