@@ -126,4 +126,20 @@ public class UserProfile {
     public void setSummary(String summary) {
         this.summary = summary;
     }
+
+    @Override
+    public String toString() {
+        return "UserProfile{" +
+                "id=" + id +
+                ", theme=" + theme +
+                ", summary='" + summary + '\'' +
+                ", userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", designation='" + designation + '\'' +
+                ", jobs=" + jobs +
+                '}';
+    }
 }
