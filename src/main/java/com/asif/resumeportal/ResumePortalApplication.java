@@ -1,5 +1,6 @@
 package com.asif.resumeportal;
 
+import com.asif.resumeportal.model.Job;
 import com.asif.resumeportal.model.UserProfile;
 import com.asif.resumeportal.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import java.time.LocalDate;
 
 @SpringBootApplication
 public class ResumePortalApplication {
@@ -49,6 +52,24 @@ public class ResumePortalApplication {
 			userProfile1.setEmail("musa@gmail.com");
 			userProfile1.setPhone("123-123-123");
 			userProfile1.setDesignation("The father of Algebra and Master of Algorithms");
+
+			Job job1 = new Job();
+			job1.setId(1);
+			job1.setCompany("company 1");
+			job1.setDesignation("designation 1");
+			job1.setStartDate(LocalDate.of(2020, 1, 1));
+			job1.setCurrentJob(true);
+			//job1.setEndDate(LocalDate.of(2022, 1, 1));
+			Job job2 = new Job();
+			job2.setId(2);
+			job2.setCompany("company 2");
+			job2.setDesignation("designation 2");
+			job2.setStartDate(LocalDate.of(2022, 1, 1));
+			job2.setEndDate(LocalDate.of(2023, 1, 1));
+
+			userProfile1.getJobs().clear();
+			userProfile1.getJobs().add(job1);
+			userProfile1.getJobs().add(job2);
 
 			UserProfile userProfile2 = new UserProfile();
 			userProfile2.setId(2);

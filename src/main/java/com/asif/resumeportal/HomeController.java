@@ -20,7 +20,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(){
-        Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName("alKhwarizmi");
+        /*Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName("alKhwarizmi");
         userProfileOptional.orElseThrow(() -> new RuntimeException("not found"));
 
         UserProfile userProfile1 = userProfileOptional.get();
@@ -41,9 +41,9 @@ public class HomeController {
         userProfile1.getJobs().clear();
         userProfile1.getJobs().add(job1);
         userProfile1.getJobs().add(job2);
-
+        System.out.println(userProfile1);
         UserProfile save = userProfileRepository.save(userProfile1);
-
+        System.out.println(userProfile1);*/
         return "profile";
     }
 
@@ -63,5 +63,6 @@ public class HomeController {
         model.addAttribute("userProfile", userProfile);
 
         return "profile-templates/" + userProfile.getTheme() + "/index";
+        //return "profile";
     }
 }

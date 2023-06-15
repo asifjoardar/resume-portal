@@ -61,10 +61,12 @@
 				<h1>Work Experience</h1>
 			</div>
 			
-			<div class="sectionContent">
-				<article>
-					<h2>j2ee developer at Sinosoft Company Limited</h2>
-					<p class="subDetails">April 2016 - Present</p>
+			<div class="sectionContent" th:each="job: ${userProfile.jobs}">
+				<article >
+					<h2><span th:text="${job.designation}">Job Title</span> at <span th:text="${job.company}">Company</span></h2>
+					<p class="subDetails">
+						<span th:text="${job.formattedStartDate}">April 2016</span> -
+						<span th:text="${job.currentJob} ? 'Present' : ${job.getFormattedEndDate}">Present</span></p>
 					<p>Description:</p>
                        Auto insurance claims project in China Pacific Insurance,
                        the system of Auto insurance,Workflow of loss occurred,claim registration,survey，loss assessment. claim handling，claim investigation</p>
@@ -74,34 +76,6 @@
                        webservice of CIRC<br/>
                        CREATE PROCEDURE of oracle<br/>
                        
-				</article>
-				<br/>
-                <br/>
-				<article>
-					<h2>j2ee developer at Chinasoft International</h2>
-					<p class="subDetails">April 2015 - January 2016</p>
-					   Description:<br/>
-                       Merchant management system in BANK OF NANJING CO.,LTD,the system of receivables of personal loan </p>
-                       Roles & Responsibilities: <br/>
-                       Developed the application by using Java, JSP, Spring MVC, Servlets, Hibernate, JDBC.<br/>
-                       Developed entity classes, Hibernate mapping files for the object relational mapping while configuring Hibernate, also  also developed HQLs and Named Queries and wrote Data Access Object (DAO) to handle HQL queries. <br/>
-                    
-                    </p>
-				</article>
-				<br/>
-                <br/>
-				<article>
-					<h2>j2ee developer at Chinasoft International</h2>
-					<p class="subDetails">June 2014 - January 2015</p>
-					   Description:<br/>
-                       overdue receivables system in BANK OF NANJING CO.,LTD,the system of receivables of personal loan </p>
-                       Roles & Responsibilities: <br/>
-                       Developed the application by using Java, JSP, Spring MVC, Servlets, Hibernate, JDBC. <br/>
-                       Module of Telegraphic collection<br/>
-                       Module of SMS collection<br/>
-                       Module of Staff performance appraisal
-                    
-                    </p>
 				</article>
 			</div>
 			<div class="clear"></div>
