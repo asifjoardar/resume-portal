@@ -118,6 +118,41 @@ public class ResumePortalApplication {
 			userProfile2.setPhone("456-456-456");
 			userProfile2.setDesignation("Father of early modern Medicine");
 
+			// job section
+			Job job3 = new Job(); // job 1
+			job3.setId(3);
+			job3.setCompany("company 1");
+			job3.setDesignation("designation 1");
+			job3.setStartDate(LocalDate.of(2020, 1, 1));
+			job3.setCurrentJob(true);
+			job3.getResponsibilities().add("produced vastly influential works in physics");
+			job3.getResponsibilities().add("produced vastly influential works in astronomy");
+			job3.getResponsibilities().add("produced vastly influential works in medicine");
+			Job job4 = new Job(); // job 2
+			job4.setId(4);
+			job4.setCompany("company 2");
+			job4.setDesignation("designation 2");
+			job4.setStartDate(LocalDate.of(2022, 1, 1));
+			job4.setEndDate(LocalDate.of(2023, 1, 1));
+			job4.getResponsibilities().add("produced vastly influential works in physics");
+			job4.getResponsibilities().add("produced vastly influential works in astronomy");
+			job4.getResponsibilities().add("produced vastly influential works in medicine");
+
+			userProfile2.getJobs().clear();
+			userProfile2.getJobs().add(job3);
+			userProfile2.getJobs().add(job4);
+
+			// education section
+			userProfile2.getEducations().clear();
+			userProfile2.getEducations().add(e1);
+			userProfile2.getEducations().add(e2);
+
+			// skills
+			userProfile2.getSkills().clear();
+			userProfile2.getSkills().add("physics");
+			userProfile2.getSkills().add("astronomy");
+			userProfile2.getSkills().add("medicine");
+
 			userProfileRepository.save(userProfile2);
 		};
 	}
