@@ -1,5 +1,6 @@
 package com.asif.resumeportal;
 
+import com.asif.resumeportal.model.Education;
 import com.asif.resumeportal.model.Job;
 import com.asif.resumeportal.model.UserProfile;
 import com.asif.resumeportal.model.Users;
@@ -75,6 +76,26 @@ public class ResumePortalApplication {
 			userProfile1.getJobs().clear();
 			userProfile1.getJobs().add(job1);
 			userProfile1.getJobs().add(job2);
+
+			Education e1 = new Education();
+			e1.setCollege("Awesome College 1");
+			e1.setQualification("Great Degree");
+			e1.setCurrentStatus(false);
+			e1.setSummary("Studied a lot");
+			e1.setStartDate(LocalDate.of(2022, 1, 1));
+			e1.setEndDate(LocalDate.of(2022, 1, 1));
+
+			Education e2 = new Education();
+			e2.setCollege("Awesome College 2");
+			e2.setQualification("Great Degree");
+			e2.setCurrentStatus(false);
+			e2.setSummary("Studied a lot");
+			e2.setStartDate(LocalDate.of(2022, 1, 1));
+			e2.setEndDate(LocalDate.of(2022, 1, 1));
+
+			userProfile1.getEducations().clear();
+			userProfile1.getEducations().add(e1);
+			userProfile1.getEducations().add(e2);
 
 			UserProfile userProfile2 = new UserProfile();
 			userProfile2.setId(2);

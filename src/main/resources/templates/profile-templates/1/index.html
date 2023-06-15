@@ -101,15 +101,12 @@
 			<div class="sectionTitle">
 				<h1>Education</h1>
 			</div>
-			
-			<div class="sectionContent">
+			<div class="sectionContent" th:each="education : ${userProfile.educations}">
 				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Nanjing Tech University</p>
-					<p>communication engineering</p>
+					<h2 th:text="${education.college}">College/University</h2>
+					<p class="subDetails" th:text="${education.qualification}">Nanjing Tech University</p>
+					<p th:text="${education.summary}">communication engineering</p>
 				</article>
-				
-				
 			</div>
 			<div class="clear"></div>
 		</section>
