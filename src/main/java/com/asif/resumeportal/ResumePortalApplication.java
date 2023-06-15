@@ -54,7 +54,8 @@ public class ResumePortalApplication {
 			userProfile1.setPhone("123-123-123");
 			userProfile1.setDesignation("The father of Algebra and Master of Algorithms");
 
-			Job job1 = new Job();
+			// job section
+			Job job1 = new Job(); // job 1
 			job1.setId(1);
 			job1.setCompany("company 1");
 			job1.setDesignation("designation 1");
@@ -63,7 +64,7 @@ public class ResumePortalApplication {
 			job1.getResponsibilities().add("produced vastly influential works in mathematics");
 			job1.getResponsibilities().add("produced vastly influential works in astronomy");
 			job1.getResponsibilities().add("produced vastly influential works in geography");
-			Job job2 = new Job();
+			Job job2 = new Job(); // job 2
 			job2.setId(2);
 			job2.setCompany("company 2");
 			job2.setDesignation("designation 2");
@@ -77,15 +78,15 @@ public class ResumePortalApplication {
 			userProfile1.getJobs().add(job1);
 			userProfile1.getJobs().add(job2);
 
-			Education e1 = new Education();
+			// education section
+			Education e1 = new Education(); // education 1
 			e1.setCollege("Awesome College 1");
 			e1.setQualification("Great Degree");
 			e1.setCurrentStatus(false);
 			e1.setSummary("Studied a lot");
 			e1.setStartDate(LocalDate.of(2022, 1, 1));
 			e1.setEndDate(LocalDate.of(2022, 1, 1));
-
-			Education e2 = new Education();
+			Education e2 = new Education(); // education 2
 			e2.setCollege("Awesome College 2");
 			e2.setQualification("Great Degree");
 			e2.setCurrentStatus(false);
@@ -97,6 +98,15 @@ public class ResumePortalApplication {
 			userProfile1.getEducations().add(e1);
 			userProfile1.getEducations().add(e2);
 
+			// skills
+			userProfile1.getSkills().clear();
+			userProfile1.getSkills().add("mathematics");
+			userProfile1.getSkills().add("astronomy");
+			userProfile1.getSkills().add("geography");
+
+			userProfileRepository.save(userProfile1);
+
+			//second user info
 			UserProfile userProfile2 = new UserProfile();
 			userProfile2.setId(2);
 			userProfile2.setUserName("sina");
@@ -108,7 +118,6 @@ public class ResumePortalApplication {
 			userProfile2.setPhone("456-456-456");
 			userProfile2.setDesignation("Father of early modern Medicine");
 
-			userProfileRepository.save(userProfile1);
 			userProfileRepository.save(userProfile2);
 		};
 	}

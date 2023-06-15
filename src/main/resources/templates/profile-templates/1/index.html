@@ -17,9 +17,6 @@
 <body id="top">
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
-		<div id="headshot" class="quickFade">
-			<img src="../profile-templates/1/headshot.jpg" alt="Alan Smith" />
-		</div>
 		
 		<div id="name">
 			<h1 class="quickFade delayTwo"><span th:text="${userProfile.firstName}">first</span> <span th:text="${userProfile.lastName}">last</span></h1>
@@ -82,16 +79,10 @@
 			<div class="sectionTitle">
 				<h1>Key Skills</h1>
 			</div>
-			
 			<div class="sectionContent">
-				
-					java--profession<br/>
-					python--good<br/>
-					js--good<br/>
-					c/c++--good<br/>
-					arm/x86 Assembly code--Modest user<br/>
-					
-				
+				<ul class="keySkills" th:each="skill : ${userProfile.skills}">
+					<li th:text="${skill}">key skill</li>
+				</ul>
 			</div>
 			<div class="clear"></div>
 		</section>
