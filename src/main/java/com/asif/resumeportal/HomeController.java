@@ -9,9 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Optional;
 
 @Controller
@@ -21,30 +18,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(){
-        /*Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName("alKhwarizmi");
-        userProfileOptional.orElseThrow(() -> new RuntimeException("not found"));
-
-        UserProfile userProfile1 = userProfileOptional.get();
-
-        Job job1 = new Job();
-        job1.setId(1);
-        job1.setCompany("company 1");
-        job1.setDesignation("designation 1");
-        job1.setStartDate(LocalDate.of(2020, 1, 1));
-        job1.setEndDate(LocalDate.of(2022, 1, 1));
-        Job job2 = new Job();
-        job2.setId(2);
-        job2.setCompany("company 2");
-        job2.setDesignation("designation 2");
-        job2.setStartDate(LocalDate.of(2022, 1, 1));
-        job2.setEndDate(LocalDate.of(2023, 1, 1));
-
-        userProfile1.getJobs().clear();
-        userProfile1.getJobs().add(job1);
-        userProfile1.getJobs().add(job2);
-        System.out.println(userProfile1);
-        UserProfile save = userProfileRepository.save(userProfile1);
-        System.out.println(userProfile1);*/
         return "profile";
     }
 
