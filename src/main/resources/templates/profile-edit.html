@@ -10,6 +10,12 @@
     <div class="container">
         <form action="#" th:action="@{/edit}" th:object="${userProfile}" method="post">
             <div class="form-group">
+                <label>Select your profile theme</label>
+                <select th:field="*{theme}">
+                    <option th:each="i : ${#numbers.sequence(1, 2)}" th:value="${i}" th:text="${'Theme ' + i}"></option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label>First Name</label>
                 <input class="form-control" th:field="*{firstName}">
             </div>
@@ -89,7 +95,7 @@
                     <td><a th:href="@{'./delete?type=skill&index=' + ${stat.index}}">Delete</a></td>
                 </tr>
             </table>
-
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
