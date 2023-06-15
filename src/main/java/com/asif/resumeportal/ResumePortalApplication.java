@@ -59,13 +59,18 @@ public class ResumePortalApplication {
 			job1.setDesignation("designation 1");
 			job1.setStartDate(LocalDate.of(2020, 1, 1));
 			job1.setCurrentJob(true);
-			//job1.setEndDate(LocalDate.of(2022, 1, 1));
+			job1.getResponsibilities().add("produced vastly influential works in mathematics");
+			job1.getResponsibilities().add("produced vastly influential works in astronomy");
+			job1.getResponsibilities().add("produced vastly influential works in geography");
 			Job job2 = new Job();
 			job2.setId(2);
 			job2.setCompany("company 2");
 			job2.setDesignation("designation 2");
 			job2.setStartDate(LocalDate.of(2022, 1, 1));
 			job2.setEndDate(LocalDate.of(2023, 1, 1));
+			job2.getResponsibilities().add("produced vastly influential works in mathematics");
+			job2.getResponsibilities().add("produced vastly influential works in astronomy");
+			job2.getResponsibilities().add("produced vastly influential works in geography");
 
 			userProfile1.getJobs().clear();
 			userProfile1.getJobs().add(job1);

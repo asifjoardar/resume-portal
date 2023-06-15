@@ -66,17 +66,13 @@
 					<h2><span th:text="${job.designation}">Job Title</span> at <span th:text="${job.company}">Company</span></h2>
 					<p class="subDetails">
 						<span th:text="${job.formattedStartDate}">April 2016</span> -
-						<span th:text="${job.currentJob} ? 'Present' : ${job.getFormattedEndDate}">Present</span></p>
-					<p>Description:</p>
-                       Auto insurance claims project in China Pacific Insurance,
-                       the system of Auto insurance,Workflow of loss occurred,claim registration,survey，loss assessment. claim handling，claim investigation</p>
-                       claim payment,closed claims<br/>
-                       Roles & Responsibilities:  <br/>
-                       Developed the application by using Java, JSP, Spring MVC, Servlets, Hibernate, JDBC. <br/>
-                       webservice of CIRC<br/>
-                       CREATE PROCEDURE of oracle<br/>
-                       
+						<span th:text="${job.currentJob} ? 'Present' : ${job.getFormattedEndDate}">Present</span>
+					</p>
+					<ul th:each="responsibilitiy : ${job.responsibilities}">
+						<li th:text="${responsibilitiy}">Responsibilitiy</li>
+					</ul>
 				</article>
+				<br>
 			</div>
 			<div class="clear"></div>
 		</section>
