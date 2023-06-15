@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Joe Bloggs - Curriculum Vitae</title>
+<title>Resume</title>
 
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
@@ -17,12 +17,10 @@
 <body id="top">
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
-		
 		<div id="name">
 			<h1 class="quickFade delayTwo"><span th:text="${userProfile.firstName}">first</span> <span th:text="${userProfile.lastName}">last</span></h1>
 			<h3 class="quickFade delayThree"><span th:text="${userProfile.designation}">designation</span></h3>
 		</div>
-		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li>email: <span th:text="${userProfile.email}">abc@163.com</span></li>
@@ -31,33 +29,22 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-	
 	<div id="mainArea" class="quickFade delayFive">
 		<section>
 			<article>
 				<div class="sectionTitle">
 					<h1>Personal Profile</h1>
 				</div>
-				
 				<div class="sectionContent">
-					<p th:text="${userProfile.summary}">Having 3 years of diverse experience in IT Industry with proven expertise in full application software life cycle development involving Analysis, Design, Development, Testing, Implementation of application software with emphasis on Object Oriented, J2EE and Client Server technologies.
-                       • Excellent capability to explore, learn and understand newer business domains and technology. <br/>
-                       • Good domain knowledge of Retail, Insurance, Banking and Telecomm domains. <br/>
-                       • Extensive experience with Core Java concepts like Exception Handling, Collections, Multithreading and with advanced J2EE such as Spring and Hibernate .<br/>
-				       • Experience in developing web pages effectively using HTML5, CSS, JavaScript, jQuery, JSON and also experience in making web page cross browser compatible. <br/>
-                       • Experience in HTTP and Protocal Buffer based MicroServices and in RESTful and SOAP Web Services. <br/>
-                       • Good Knowledge of Log4j/SLF4j for logging, Ant/Maven for project deployment and JUnit for unit and integration testing. 
+					<p th:text="${userProfile.summary}">personal summary</p>
 			    </div>
             </article>
 			<div class="clear"></div>
 		</section>
-		
-		
 		<section>
 			<div class="sectionTitle">
 				<h1>Work Experience</h1>
 			</div>
-			
 			<div class="sectionContent" th:each="job: ${userProfile.jobs}">
 				<article >
 					<h2><span th:text="${job.designation}">Job Title</span> at <span th:text="${job.company}">Company</span></h2>
@@ -73,8 +60,6 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
-		
 		<section>
 			<div class="sectionTitle">
 				<h1>Key Skills</h1>
@@ -86,8 +71,6 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
-		
 		<section>
 			<div class="sectionTitle">
 				<h1>Education</h1>
@@ -101,9 +84,9 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
 	</div>
 </div>
+
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
