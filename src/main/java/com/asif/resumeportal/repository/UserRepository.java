@@ -1,4 +1,4 @@
-package com.asif.resumeportal;
+package com.asif.resumeportal.repository;
 
 import com.asif.resumeportal.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;

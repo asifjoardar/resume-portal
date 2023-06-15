@@ -3,6 +3,7 @@ package com.asif.resumeportal;
 import com.asif.resumeportal.model.Education;
 import com.asif.resumeportal.model.Job;
 import com.asif.resumeportal.model.UserProfile;
+import com.asif.resumeportal.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,9 +24,9 @@ public class HomeController {
 
     @GetMapping("/edit")
     public String edit(Model model, Principal principal, @RequestParam(required = false) String add){
-        String userId = principal.getName();
-        Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName(userId);
-        userProfileOptional.orElseThrow(() -> new RuntimeException("not found: " + userId));
+        String userName = principal.getName();
+        Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName(userName);
+        userProfileOptional.orElseThrow(() -> new RuntimeException("not found: " + userName));
 
         UserProfile userProfile = userProfileOptional.get();
         if("job".equals(add)){
@@ -35,16 +36,16 @@ public class HomeController {
         } else if("skill".equals(add)){
             userProfile.getSkills().add("");
         }
-        model.addAttribute("userId", userId);
+        model.addAttribute("userId", userName);
         model.addAttribute("userProfile", userProfile);
         return "profile-edit";
     }
 
     @GetMapping("/delete")
     public String delete(Model model, Principal principal, @RequestParam String type, @RequestParam int index) {
-        String userId = principal.getName();
-        Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName(userId);
-        userProfileOptional.orElseThrow(() -> new RuntimeException("Not found: " + userId));
+        String userName = principal.getName();
+        Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName(userName);
+        userProfileOptional.orElseThrow(() -> new RuntimeException("Not found: " + userName));
         UserProfile userProfile = userProfileOptional.get();
         if ("job".equals(type)) {
             userProfile.getJobs().remove(index);

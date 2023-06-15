@@ -4,6 +4,8 @@ import com.asif.resumeportal.model.Education;
 import com.asif.resumeportal.model.Job;
 import com.asif.resumeportal.model.UserProfile;
 import com.asif.resumeportal.model.Users;
+import com.asif.resumeportal.repository.UserProfileRepository;
+import com.asif.resumeportal.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
