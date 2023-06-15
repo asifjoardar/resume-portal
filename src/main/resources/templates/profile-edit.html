@@ -66,6 +66,7 @@
                     <td><a th:href="@{'./delete?type=job&index=' + ${stat.index}}">Delete</a></td>
                 </tr>
             </table>
+            <p><a href="./edit?add=job">Add Job</a></p>
 
             <h3>Education</h3>
             <table>
@@ -88,6 +89,8 @@
                     <td><a th:href="@{'./delete?type=education&index=' + ${stat.index}}">Delete</a></td>
                 </tr>
             </table>
+            <p><a href="./edit?add=education">Add Education</a></p>
+
             <h3>Skills</h3>
             <table>
                 <tr th:each="skill, stat: *{skills}">
@@ -95,6 +98,8 @@
                     <td><a th:href="@{'./delete?type=skill&index=' + ${stat.index}}">Delete</a></td>
                 </tr>
             </table>
+            <p><a href="./edit?add=skill">Add Skill</a></p>
+
             <input type="submit" value="Submit">
         </form>
     </div>
